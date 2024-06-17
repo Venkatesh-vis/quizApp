@@ -67,7 +67,7 @@
 }
 .answer:hover,
 .answer.active{
-    background: rgb(35, 35, 125);
+    background: rgb(110, 110, 202);
 }
 .answer.wrong{
     animation: wrong 3s ease forwards;
@@ -88,6 +88,27 @@
         background: crimson;
     }
 }
+
+.answer.correct{
+    animation: correct 3s ease forwards;
+}
+@keyframes correct{
+    0%,
+    22%,
+    42%{
+        background: rgb(35, 35, 125);
+    }
+    20%,
+    40%,
+    60%{
+        background: linear-gradient(#0e0124,#22074d) ;
+    }
+    62%,
+    100%{
+        background: green;
+    }
+}
+
 .pyramid{
     width: 25%;
     display: flex;
@@ -115,4 +136,12 @@
 }
 .moneyListItemAmount{
     font-style: 20px;
+}
+.end{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
