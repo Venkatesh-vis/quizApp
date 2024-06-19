@@ -1,147 +1,82 @@
-.app{
-    height: 100vh;
+.app {
     display: flex;
-    background-color: #020230;
-    color: white;
-}
-.main{
-    width: 75%;
-    background: url("./Assets/bg.jpg") center;
+    flex-direction: row;
+  }
+  
+  .main {
+    flex: 1;
+  }
+  
+  .end {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .pyramid {
+    width: 200px;
+    margin-left: 20px;
+  }
+  
+  .moneyList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .moneyListItem {
     display: flex;
-    flex-direction: column ;
-}
-.top{
-    height: 50%;
-    position: relative;
-}
-.timer{
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    border: 5px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    font-weight: 700;
-    position: absolute;
-    bottom: 10px;
-    left: 80px;
-}
-.bottom{
-    height: 50%;
-}
-.quiz{
-    height: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  
+  .moneyListItem.active {
+    background-color: yellow;
+  }
+  
+  .timer {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  .top,
+  .bottom {
+    padding: 20px;
+  }
+  
+  .quiz {
+    text-align: center;
+  }
+  
+  .question {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .answers {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-}
-.question{
+  }
+  
+  .answer {
     width: 80%;
-    background: linear-gradient(#100241,black) ;
-    border: 2px solid white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 20px;
-}
-.answers{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.answer{
-    width: 40%;
     padding: 10px;
-    text-align: center;
-    background: linear-gradient(#0e0124,#22074d) ;
-    border: 1px solid white;
-    border-radius: 15px;
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0 10px 20px 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
     cursor: pointer;
-}
-.answer:hover,
-.answer.active{
-    background: rgb(110, 110, 202);
-}
-.answer.wrong{
-    animation: wrong 3s ease forwards;
-}
-@keyframes wrong{
-    0%,
-    22%,
-    42%{
-        background: rgb(35, 35, 125);
-    }
-    20%,
-    40%,
-    60%{
-        background: linear-gradient(#0e0124,#22074d) ;
-    }
-    62%,
-    100%{
-        background: crimson;
-    }
-}
-
-.answer.correct{
-    animation: correct 3s ease forwards;
-}
-@keyframes correct{
-    0%,
-    22%,
-    42%{
-        background: rgb(35, 35, 125);
-    }
-    20%,
-    40%,
-    60%{
-        background: linear-gradient(#0e0124,#22074d) ;
-    }
-    62%,
-    100%{
-        background: green;
-    }
-}
-
-.pyramid{
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.moneyList{
-    list-style: none;
-    width: 100%;
-    padding: 20px;
-}
-.moneyListItem{
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    border-radius: 5px;
-}
-.moneyListItem.active{
-    background-color: teal;
-}
-.moneyListItemNumber{
-    font-size: 18px;
-    font-weight: 100;
-    width: 30%;
-}
-.moneyListItemAmount{
-    font-style: 20px;
-}
-.end{
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
+  }
+  
+  .answer.active {
+    background-color: #f0f0f0;
+  }
+  
+  .answer.correct {
+    background-color: green;
+  }
+  
+  .answer.wrong {
+    background-color: red;
+  }
+  
