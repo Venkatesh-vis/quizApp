@@ -1,6 +1,6 @@
 .main-container {
   height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #021A3C 0%, #003459 100%);
 }
 
 .left-section {
@@ -9,6 +9,9 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .right-section {
@@ -19,15 +22,26 @@
   flex-direction: column;
 }
 
-.card {
-  border-radius: 10px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
 .timer-container {
   margin-bottom: 20px;
+}
+
+.player-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.alert {
+  text-align: center;
+  margin: 0 auto;
+  background-color: transparent; 
+  border: none; 
+  box-shadow: none; 
+}
+
+.alert-success {
+  color: #155724;
 }
 
 .right-section .list-group-item {
@@ -35,8 +49,4 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px; /* Adding gap between question number and amount */
-}
-
-.timer-container {
-  margin-bottom: 20px;
 }

@@ -1,14 +1,14 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Quiz from "../quiz/quiz";
 import Timer from "../Timer/Timer";
-import { Container, Row, Col, Card, ListGroup, ListGroupItem, Alert, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, ListGroup, ListGroupItem, Alert } from 'react-bootstrap';
 import './GameUI.css';
 
 const GameUI = () => {
   const [questionNumber, setQuestionNumber] = useState(1);
   const [time, setTime] = useState(false);
   const [earned, setEarned] = useState("₹0");
-  const [gameOver, setGameOver] = useState(false);
+  const [ setGameOver] = useState(false);
 
 
   
@@ -376,11 +376,11 @@ const GameUI = () => {
   return (
     <Container fluid className="p-3 main-container">
       <Row className="h-100">
-        <Col lg={8} className="left-section d-flex flex-column">
-          <Card className="mb-3 flex-grow-1">
-            <Card.Body className="d-flex flex-column">
+        <Col lg={8} className="left-section d-flex flex-column align-items-center justify-content-center">
+          <Card className="mb-3">
+            <Card.Body className="d-flex flex-column align-items-center justify-content-center">
               {time ? (
-                <Alert variant="success" className="mt-auto">
+                <Alert variant="success" className="mt-auto text-center">
                   You earned: {earned}
                 </Alert>
               ) : (
@@ -393,7 +393,6 @@ const GameUI = () => {
                     setTime={setTime}
                     setQuestionNumber={setQuestionNumber}
                     questionNumber={questionNumber}
-                    setGameOver={setGameOver} // Pass setGameOver to handle game over
                   />
                 </>
               )}
@@ -407,7 +406,7 @@ const GameUI = () => {
               {moneyPyramid.map((m) => (
                 <ListGroupItem
                   key={m.id}
-                  className={questionNumber === m.id ? "active" : ""}
+                  className={questionNumber === m.id ? 'active' : ''}
                 >
                   <span>{m.id}</span> <span className="float-right">{m.amount}</span>
                 </ListGroupItem>
