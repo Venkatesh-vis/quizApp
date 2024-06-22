@@ -8,9 +8,6 @@ const GameUI = () => {
   const [questionNumber, setQuestionNumber] = useState(1);
   const [time, setTime] = useState(false);
   const [earned, setEarned] = useState("₹0");
-  const [ setGameOver] = useState(false);
-
-
   
 
   const data = [
