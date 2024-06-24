@@ -26,12 +26,6 @@
   margin-bottom: 20px;
 }
 
-.player-name {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 .alert {
   text-align: center;
   margin: 0 auto;
@@ -48,5 +42,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px; /* Adding gap between question number and amount */
+  gap: 10px; 
 }
