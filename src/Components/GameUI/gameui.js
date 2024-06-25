@@ -36,22 +36,22 @@ const GameUI = () => {
       {
       id: 2,
       question:
-      "What is the correct JavaScript syntax to change the content of the HTML element below? <p id='demo'>This is a demonstration.</p> ",
+      "JavaScript is a _____ language ",
       answers: [
       {
-      text: 'document.getElement("p").innerHTML = "Hello World!";',
+      text: 'Programming"',
       correct: false,
       },
       {
-      text: '#demo.innerHTML = "Hello World!";',
+      text: 'Scripting"',
       correct: false,
       },
       {
-      text: 'document.getElementById("demo").innerHTML = "Hello World!";',
+      text: 'scripting and programming',
       correct: true,
       },
       {
-      text: 'document.getElementByName("p").innerHTML = "Hello World!";',
+      text: '"Markup',
       correct: false,
       },
       ],
